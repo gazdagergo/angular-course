@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  isFavorite = false;
 
   onClick($event) {
     console.log('Clicked', $event);
@@ -16,4 +17,9 @@ export class AppComponent {
   onDivClick() {
     console.log('Handled by Div');
   }
+
+  toggleStar() {
+    this.isFavorite = !this.isFavorite;
+  }
+
 }

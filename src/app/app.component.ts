@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app works!';
 
-  onClick() {
-    console.log('button clicked');
+  onClick($event) {
+    console.log('Clicked', $event);
   }
 }

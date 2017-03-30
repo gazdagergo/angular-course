@@ -10,6 +10,7 @@ export class AppComponent {
 
   onClick($event) {
     console.log('Clicked', $event);
+    $event.stopPropagation();
   }
 
   onDivClick() {

@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isActive = true; //works with falsy / truly values
+  isActive = false; //works with falsy / truly values
   title = 'app works!';
 }

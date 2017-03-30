@@ -4,8 +4,9 @@
       My First Angular {{title}}
     </h1>
 
-
-    <button class="btn btn-primary"  (click)="onClick($event)">Submit</button>
+    <div (click)="onDivClick()">
+      <button class="btn btn-primary"  (click)="onClick($event)">Submit</button>
+    </div>
 
     <courses></courses>
     <authors></authors>

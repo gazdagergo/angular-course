@@ -11,4 +11,8 @@ export class AppComponent {
   onClick($event) {
     console.log('Clicked', $event);
   }
+
+  onDivClick() {
+    console.log('Handled by Div');
+  }
 }

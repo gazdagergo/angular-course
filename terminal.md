@@ -7,3 +7,12 @@ ng serve
 
 #create componend
 ng g component courses
+
+
+#create service
+ng g service course
+
+
+#create another component and service
+ng g component authors
+ng g service author

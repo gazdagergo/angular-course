@@ -8,7 +8,7 @@
       <button class="btn btn-primary"  (click)="onClick($event)">Submit</button>
     </div>
 
-    <input type="text" [value]="title" (input)="title = $event.target.value" />
+    <input type="text" [(ngModel)]="title" />
     <input type="button" (click)="title = ''" value="Clear" />
     Preview: {{title}}
 

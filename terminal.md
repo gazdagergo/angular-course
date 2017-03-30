@@ -19,3 +19,6 @@ ng g service author
 
 #creating directive
 ng g directive auto-grow
+
+#deploy
+ng build --env=prod

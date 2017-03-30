@@ -12,4 +12,6 @@ export class CoursesComponent implements OnInit {
   ngOnInit() {
   }
 
+  title = "The title of courses page";
+
 }

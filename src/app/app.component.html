@@ -1,5 +1,13 @@
-<h1>
-  My First Angular {{title}}
-</h1>
-<courses></courses>
-<authors></authors>
+<div class="container">
+  <div class="row">
+    <h1>
+      My First Angular {{title}}
+    </h1>
+
+
+    <button class="btn btn-primary" [class.active]="isActive">Submit</button>
+
+    <courses></courses>
+    <authors></authors>
+  </div>
+</div>

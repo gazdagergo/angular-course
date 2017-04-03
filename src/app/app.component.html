@@ -18,4 +18,11 @@
     <authors></authors>
     <heart [heartLiked]="tweet.iLike" [likeNum]="tweet.totalLikes"></heart>
   </div>
+  <div class="row">
+    <vote 
+      [voteCount]="votes.voteCount" 
+      [myVote]="votes.myVote"
+      (vote)="saveMyVote($event)">
+    </vote>
+  </div>
 </div>

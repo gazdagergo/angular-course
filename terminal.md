@@ -25,3 +25,6 @@ ng build --env=prod
 
 #put favourite into new component
 ng g component favorite
+
+
+ng g component vote

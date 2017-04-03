@@ -1,0 +1,13 @@
+<div class="vote-wrap">
+  <i 
+    class="glyphicon glyphicon-menu-up"
+    [class.highlighted]="myVote == 1"
+    (click)="voteUp()"
+  ></i>
+    <span>{{ voteCount }}</span>
+  <i 
+    class="glyphicon glyphicon-menu-down"
+    [class.highlighted]="myVote == -1"
+    (click)="voteDown()"
+  ></i>
+</div>

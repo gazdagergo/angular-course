@@ -21,6 +21,10 @@ export class AppComponent {
     console.log($event);
   }
 
+  saveMyVote($event) {
+    console.log($event);
+  }
+
   post = {
     title: "Title",
     isFavorite: true
@@ -29,6 +33,11 @@ export class AppComponent {
   tweet = {
     totalLikes: 10,
     iLike: false
+  }
+
+  votes = {
+    voteCount: 9,
+    myVote: -1
   }
 
 }

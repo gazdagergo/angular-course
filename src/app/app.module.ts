@@ -9,6 +9,7 @@ import { AuthorsComponent } from './authors/authors.component';
 import { AutoGrowDirective } from './auto-grow.directive';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { HeartComponent } from './heart/heart.component';
+import { VoteComponent } from './vote/vote.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HeartComponent } from './heart/heart.component';
     AuthorsComponent,
     AutoGrowDirective,
     FavoriteComponent,
-    HeartComponent
+    HeartComponent,
+    VoteComponent
   ],
   imports: [
     BrowserModule,

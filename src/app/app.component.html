@@ -12,14 +12,7 @@
     <input type="button" (click)="title = ''" value="Clear" />
     Preview: {{title}}
 
-    <div>
-      <i class="glyphicon" 
-        [class.glyphicon-star]="isFavorite" 
-        [class.glyphicon-star-empty]="!isFavorite"
-        (click)="toggleStar()"
-      ></i>
-    </div>
-
+    <favorite></favorite>
     <courses></courses>
     <authors></authors>
   </div>

@@ -22,3 +22,6 @@ ng g directive auto-grow
 
 #deploy
 ng build --env=prod
+
+#put favourite into new component
+ng g component favorite

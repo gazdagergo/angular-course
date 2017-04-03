@@ -17,4 +17,9 @@ export class AppComponent {
     console.log('Handled by Div');
   }
 
+  post = {
+    title: "Title",
+    isFavorite: true
+  }
+
 }

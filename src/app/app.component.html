@@ -12,7 +12,7 @@
     <input type="button" (click)="title = ''" value="Clear" />
     Preview: {{title}}
 
-    <favorite></favorite>
+    <favorite [isFavorite]="post.isFavorite"></favorite>
     <courses></courses>
     <authors></authors>
   </div>

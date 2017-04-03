@@ -12,7 +12,9 @@
     <input type="button" (click)="title = ''" value="Clear" />
     Preview: {{title}}
 
-    <favorite [is-favorite]="post.isFavorite"></favorite>
+    <favorite 
+      [is-favorite]="post.isFavorite"
+      (starChange)="onFavoriteChange($event)"></favorite>
     <courses></courses>
     <authors></authors>
   </div>

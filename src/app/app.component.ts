@@ -17,6 +17,10 @@ export class AppComponent {
     console.log('Handled by Div');
   }
 
+  onFavoriteChange($event) {
+    console.log($event);
+  }
+
   post = {
     title: "Title",
     isFavorite: true

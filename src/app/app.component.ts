@@ -26,4 +26,9 @@ export class AppComponent {
     isFavorite: true
   }
 
+  tweet = {
+    totalLikes: 10,
+    iLike: false
+  }
+
 }

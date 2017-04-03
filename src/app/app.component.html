@@ -16,5 +16,6 @@
       (starChange)="onFavoriteChange($event)"></favorite>
     <courses></courses>
     <authors></authors>
+    <heart [heartLiked]="tweet.iLike" [likeNum]="tweet.totalLikes"></heart>
   </div>
 </div>

@@ -1,5 +1,7 @@
-<h1>
-  My First Angular {{title}}
-</h1>
-<courses></courses>
-<authors></authors>
+
+<div *ngIf="courses.length == 0">
+  No courses 
+</div>
+<div *ngIf="courses.length > 0">
+  courses:
+</div>

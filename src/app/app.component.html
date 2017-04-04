@@ -1,7 +1,7 @@
 
-<div *ngIf="courses.length == 0">
+<div [hidden]="courses.length > 0">
   No courses 
 </div>
-<div *ngIf="courses.length > 0">
+<div [hidden]="courses.length == 0">
   courses:
 </div>

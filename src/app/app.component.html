@@ -1,5 +1,9 @@
-<h1>
-  My First Angular {{title}}
-</h1>
-<courses></courses>
-<authors></authors>
+<div class="container">
+  <div class="row">
+    <tweet *ngFor="let tweet of tweets, let i = index"
+      [text]="tweet.text"
+      [i]="i"
+      [totalLikes]="tweet.totalLikes"
+      [iLiked]="tweet.iLiked"></tweet>
+  </div>
+</div>

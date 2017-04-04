@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses/courses.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { AutoGrowDirective } from './auto-grow.directive';
+import { TweetComponent } from './tweet/tweet.component';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
     AuthorsComponent,
-    AutoGrowDirective
+    AutoGrowDirective,
+    TweetComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,

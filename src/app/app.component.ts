@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  
+  tweets = [
+    {text: "bee", totalLikes: 4, iLiked: false},
+    {text: "beu", totalLikes: 14, iLiked: true},
+    {text: "baaa", totalLikes: 4, iLiked: false}
+  ];
+
 }

@@ -5,8 +5,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bootstrap-panel.component.css'],
   template: `
     <div class="panel panel-default">
-      <div class="panel-heading"></div>
-      <div class="panel-body"></div>
+      <div class="panel-heading">Heading</div>
+      <div class="panel-body">
+        <ng-content></ng-content>
+      </div>
     </div>
   `
 })

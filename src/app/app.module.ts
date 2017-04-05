@@ -10,6 +10,7 @@ import { AutoGrowDirective } from './auto-grow.directive';
 import { SummaryPipe } from './summary.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
+import { ZippyComponent } from './zippy/zippy.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.compo
     AutoGrowDirective,
     SummaryPipe,
     FavoriteComponent,
-    BootstrapPanelComponent
+    BootstrapPanelComponent,
+    ZippyComponent
   ],
   imports: [
     BrowserModule,

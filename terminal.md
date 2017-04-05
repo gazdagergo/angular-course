@@ -28,3 +28,6 @@ ng g component favorite
 
 #ng-content
 ng g component bootstrap-panel
+
+#zippy
+ng g component zippy

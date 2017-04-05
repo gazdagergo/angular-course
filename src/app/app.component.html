@@ -2,14 +2,10 @@
 <div class="container">
   <div class="row">
     <br>
-
-    <button class="btn"
-      [ngStyle]="{
-        'background-color' :   canSave ? 'blue' : 'gray', 
-        color :             canSave ? 'white' : 'black',
-        fontWeight :        canSave ? 'bold' : 'normal'
-      }"
-    >Submit</button>
+    <ul>
+      <li>Assigned to: {{ task.assignee.name }}</li>
+      <li>Title: {{ task.title }}</li>
+    </ul>
 
 
   </div>

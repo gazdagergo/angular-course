@@ -9,6 +9,7 @@ import { AuthorsComponent } from './authors/authors.component';
 import { AutoGrowDirective } from './auto-grow.directive';
 import { SummaryPipe } from './summary.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FavoriteComponent } from './favorite/favorite.component';
     AuthorsComponent,
     AutoGrowDirective,
     SummaryPipe,
-    FavoriteComponent
+    FavoriteComponent,
+    BootstrapPanelComponent
   ],
   imports: [
     BrowserModule,

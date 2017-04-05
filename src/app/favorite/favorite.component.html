@@ -1,7 +1,9 @@
     <div>
       <i class="glyphicon" 
-        [class.glyphicon-star]="isFavorite" 
-        [class.glyphicon-star-empty]="!isFavorite"
+        [ngClass]="{
+          'glyphicon-star-empty': !isFavorite,
+          'glyphicon-star': isFavorite
+        }"
         (click)="toggleStar()"
       ></i>
     </div>

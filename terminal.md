@@ -31,3 +31,6 @@ ng g component bootstrap-panel
 
 #zippy
 ng g component zippy
+
+#form
+ng g component contact-form

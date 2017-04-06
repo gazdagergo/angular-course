@@ -12,6 +12,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
 import { ZippyComponent } from './zippy/zippy.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     FavoriteComponent,
     BootstrapPanelComponent,
     ZippyComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,

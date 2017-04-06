@@ -34,3 +34,4 @@ ng g component zippy
 
 #form
 ng g component contact-form
+ng g component login-form

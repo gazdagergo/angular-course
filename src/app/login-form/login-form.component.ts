@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit, Inject } from '@angular/core';
+import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'login-form',
@@ -7,21 +7,25 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
+  
+  form: FormGroup;
 
-  constructor() { }
+  constructor(fb: FormBuilder) {
+    this.form = fb.group({
+      username: ['', 
+        [
+          Validators.required,
+          Validators.minLength(5)
+        ]
+      ],
+      password: ['', Validators.required],
+    })
+   }
 
 
   ngOnInit() {
   }
 
-  form = new FormGroup({
-    username: new FormControl('', 
-      [
-        Validators.required, 
-        Validators.minLength(5)
-      ]),
-    password: new FormControl('', Validators.required)
-  });
 
   signup(form){
     console.log(this.form.value);

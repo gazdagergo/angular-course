@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { UsernameValidators } from './usernameValidators';
 
 @Component({
   selector: 'login-form',
@@ -12,13 +13,11 @@ export class LoginFormComponent implements OnInit {
 
   constructor(fb: FormBuilder) {
     this.form = fb.group({
-      username: ['', 
-        [
-          Validators.required,
-          Validators.minLength(5)
-        ]
-      ],
-      password: ['', Validators.required],
+      username: ['', Validators.compose([
+        Validators.required, 
+        UsernameValidators.cannotContainSpace,
+        Validators.minLength(5)])],
+      password: ['', Validators.required]
     })
    }
 

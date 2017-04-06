@@ -1,6 +1,18 @@
 # A2courses
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+The project contains a fundamental Angular 2 tutorial. The process can be followed step-by-step as the folder is a local GIT repository. Every step has been commited separately.
+
+## Install the project locally
+
+After downloading the and unzipping the files to your local storage:
+*** go to the folder: ***
+> cd a2course
+
+*** install dependencies ***
+> npm install
+
+
 
 ## Development server
 

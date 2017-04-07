@@ -2,7 +2,7 @@
 
   <div class="form-group">
     <label for="username">Username</label>
-    <input formControlName="username" type="text" id="username" class="form-control" title="{{ log(form.controls.username) }}">
+    <input formControlName="username" type="text" id="username" class="form-control">
     <div *ngIf="form.controls.username.pending" class="alert alert-danger">
       Checking uniqueness...
     </div>
@@ -11,6 +11,7 @@
       <span *ngIf="form.controls.username.errors.shouldBeUnique">Username shold be unique.</span>
       <span *ngIf="form.controls.username.errors.minlength != null">Username must be minimum 5 characters long.</span>
       <span *ngIf="form.controls.username.errors.cannotContainSpace">Username cannot contain space.</span>
+      <span *ngIf="form.controls.username.errors.invalidLogin">Username or password is invalid.</span>
     </div>
   </div>
   

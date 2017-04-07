@@ -33,7 +33,10 @@ export class LoginFormComponent implements OnInit {
 
 
   signup(form){
-    console.log(this.form.value);
+    // var result = authService.login(this.form.value);
+    var result = {
+      invalidLogin: true
+    };
+    this.form.controls['username'].setErrors(result);
   }
-
 }

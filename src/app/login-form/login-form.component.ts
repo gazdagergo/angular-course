@@ -8,15 +8,21 @@ import { UsernameValidators } from './usernameValidators';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
-  
+
   form: FormGroup;
 
   constructor(fb: FormBuilder) {
     this.form = fb.group({
-      username: ['', Validators.compose([
-        Validators.required, 
-        UsernameValidators.cannotContainSpace,
-        Validators.minLength(5)])],
+      username: 
+      [
+        '', 
+        Validators.compose([
+            Validators.required, 
+            UsernameValidators.cannotContainSpace,
+            Validators.minLength(5)
+          ]),
+        Validators.composeAsync([UsernameValidators.shouldBeUnique])  
+        ],
       password: ['', Validators.required]
     })
    }

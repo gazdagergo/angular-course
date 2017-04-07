@@ -10,7 +10,7 @@ export class UsernameValidators {
                 } else {
                     resolve(null);
                 }
-            }, 1000)
+            }, 2000)
         });
     }
 

@@ -2,7 +2,10 @@
 
   <div class="form-group">
     <label for="username">Username</label>
-    <input formControlName="username" type="text" id="username" class="form-control">
+    <input formControlName="username" type="text" id="username" class="form-control" title="{{ log(form.controls.username) }}">
+    <div *ngIf="form.controls.username.pending" class="alert alert-danger">
+      Checking uniqueness...
+    </div>
     <div *ngIf="form.controls.username.errors != null && form.controls.username.touched" class="alert alert-danger">
       <span *ngIf="form.controls.username.errors.required">Username is required.</span>
       <span *ngIf="form.controls.username.errors.shouldBeUnique">Username shold be unique.</span>

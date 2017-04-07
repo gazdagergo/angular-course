@@ -1,6 +1,7 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ElementRef } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { UsernameValidators } from './usernameValidators';
+import { Observable } from 'rxjs/Rx';
 
 @Component({
   selector: 'login-form',
@@ -11,7 +12,7 @@ export class LoginFormComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(fb: FormBuilder) {
+  constructor(fb: FormBuilder, el: ElementRef) {
     this.form = fb.group({
       username: 
       [
@@ -24,9 +25,16 @@ export class LoginFormComponent implements OnInit {
         Validators.composeAsync([UsernameValidators.shouldBeUnique])  
         ],
       password: ['', Validators.required]
-    })
-   }
+    });
 
+
+    var keyups = Observable.fromEvent(el.nativeElement, "keyup");
+
+    keyups.subscribe(function(data){
+      console.log(data);
+    })
+
+   }
 
   ngOnInit() {
   }

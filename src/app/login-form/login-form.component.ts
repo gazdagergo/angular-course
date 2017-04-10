@@ -42,7 +42,8 @@ export class LoginFormComponent implements OnInit {
       })
       ;
 
-   keyups.subscribe(data => console.log(data));
+   var subscription = keyups.subscribe(data => console.log(data));
+   subscription.unsubscribe();
 
    }
 

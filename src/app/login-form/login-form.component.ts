@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms'
 import { UsernameValidators } from './usernameValidators';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 
 @Component({
   selector: 'login-form',
@@ -13,7 +14,7 @@ export class LoginFormComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(fb: FormBuilder, el: ElementRef) {
+  constructor(fb: FormBuilder, el: ElementRef, private http: Http) {
     this.form = fb.group({
       username: 
       [
@@ -34,6 +35,11 @@ export class LoginFormComponent implements OnInit {
       .filter(text => text.length >= 3)
       .debounceTime(400)
       .distinctUntilChanged()
+      .flatMap(serchTherm => {
+        var url = "https://api.spotify.com/v1/search?type=artist&q=" + serchTherm;
+        var promise = http.get(url).map(res => res.json()).toPromise();
+        return Observable.fromPromise(promise);
+      })
       ;
 
    keyups.subscribe(data => console.log(data));

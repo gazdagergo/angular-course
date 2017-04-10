@@ -2,6 +2,7 @@ import { Component, OnInit, Inject, ElementRef } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { UsernameValidators } from './usernameValidators';
 import { Observable } from 'rxjs/Rx';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'login-form',
@@ -28,9 +29,14 @@ export class LoginFormComponent implements OnInit {
     });
 
 
-    var keyups = Observable.fromEvent(el.nativeElement, "keyup");
+    var keyups = Observable.fromEvent(el.nativeElement, "keyup")
+      .map((e:any) => e.target.value)
+      .filter(text => text.length >= 3)
+      .debounceTime(400)
+      .distinctUntilChanged()
+      ;
 
-    keyups.subscribe(data => console.log(data));
+   keyups.subscribe(data => console.log(data));
 
    }
 

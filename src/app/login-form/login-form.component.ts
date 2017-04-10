@@ -30,9 +30,7 @@ export class LoginFormComponent implements OnInit {
 
     var keyups = Observable.fromEvent(el.nativeElement, "keyup");
 
-    keyups.subscribe(function(data){
-      console.log(data);
-    })
+    keyups.subscribe(data => console.log(data));
 
    }
 
